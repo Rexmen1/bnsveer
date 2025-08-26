@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharatiya Nyaya Sanhita (BNS) 2023 - Comprehensive Presentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide {
+            width: 90vw;
+            height: 85vh;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 40px;
+            display: none;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .slide h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+
+        .slide h2 {
+            color: #34495e;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-left: 5px solid #e74c3c;
+            padding-left: 15px;
+        }
+
+        .slide h3 {
+            color: #2980b9;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .slide p, .slide li {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .slide ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .slide li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background: #f39c12;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .nav-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .slide-counter {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #34495e;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .title-slide {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title-slide h1 {
+            font-size: 3.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .title-slide .subtitle {
+            font-size: 1.8em;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+        }
+
+        .title-slide .date {
+            font-size: 1.3em;
+            color: #95a5a6;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 20px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #3498db;
+            border-radius: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 17px;
+            width: 2px;
+            height: calc(100% + 10px);
+            background: #bdc3c7;
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Title Slide -->
+        <div class="slide active title-slide">
+            <div class="slide-counter">1 / 36</div>
+            <h1>Bharatiya Nyaya Sanhita (BNS) 2023</h1>
+            <div class="subtitle">India's New Criminal Code</div>
+            <div class="date">Replacing the Indian Penal Code, 1860</div>
+            <p style="margin-top: 40px; font-size: 1.2em; color: #7f8c8d;">A Comprehensive Overview of India's Legal Revolution</p>
+        </div>
+
+        <!-- Slide 2: Table of Contents -->
+        <div class="slide">
+            <div class="slide-counter">2 / 36</div>
+            <h1>Table of Contents</h1>
+            <ul style="font-size: 1.3em; line-height: 2;">
+                <li>Introduction and Background</li>
+                <li>Need for Reform</li>
+                <li>Legislative Timeline</li>
+                <li>Key Statistics and Comparison</li>
+                <li>Structure and Organization</li>
+                <li>Major Changes from IPC</li>
+                <li>New Offenses Introduced</li>
+                <li>Enhanced Punishments</li>
+                <li>Gender Inclusivity</li>
+                <li>Technology Integration</li>
+                <li>Implementation and Impact</li>
+                <li>Challenges and Criticisms</li>
+                <li>Conclusion</li>
+            </ul>
+        </div>
+
+        <!-- Slide 3: Introduction -->
+        <div class="slide">
+            <div class="slide-counter">3 / 36</div>
+            <h1>Introduction</h1>
+            <h2>What is Bharatiya Nyaya Sanhita (BNS) 2023?</h2>
+            <p>The <span class="highlight">Bharatiya Nyaya Sanhita (BNS) 2023</span> is India's new criminal code that came into effect on <span class="highlight">July 1, 2024</span>, replacing the colonial-era Indian Penal Code (IPC) of 1860.</p>
+            
+            <h3>Key Facts:</h3>
+            <ul>
+                <li><strong>Official Name:</strong> The Bharatiya Nyaya Sanhita, 2023 (Act No. 45 of 2023)</li>
+                <li><strong>Language:</strong> भारतीय न्याय संहिता, 2023 (Hindi)</li>
+                <li><strong>Literal Translation:</strong> Indian Justice Code (IJC), 2023</li>
+                <li><strong>Territorial Extent:</strong> Entire India</li>
+                <li><strong>Ministry:</strong> Ministry of Home Affairs</li>
+                <li><strong>Introduced by:</strong> Amit Shah (Home Minister)</li>
+            </ul>
+        </div>
+
+        <!-- Slide 4: Historical Context -->
+        <div class="slide">
+            <div class="slide-counter">4 / 36</div>
+            <h1>Historical Context</h1>
+            <h2>From Colonial Legacy to Modern Justice</h2>
+            
+            <h3>The Indian Penal Code (1860)</h3>
+            <ul>
+                <li>Drafted by <span class="highlight">Thomas Babington Macaulay</span></li>
+                <li>Chairman of the first Law Commission</li>
+                <li>Based on colonial-era legal framework</li>
+                <li>Served India for <span class="highlight">164 years</span></li>
+            </ul>
+
+            <h3>Why Change Was Needed</h3>
+            <ul>
+                <li><strong>Outdated Provisions:</strong> Many sections were no longer relevant</li>
+                <li><strong>Colonial Mindset:</strong> Punishment-oriented rather than justice-oriented</li>
+                <li><strong>Technological Gap:</strong> Inadequate coverage of cyber crimes</li>
+                <li><strong>Social Evolution:</strong> Society has undergone multi-dimensional changes</li>
+                <li><strong>Gender Recognition:</strong> Limited recognition of transgender rights</li>
+            </ul>
+        </div>
+
+        <!-- Slide 5: Need for Reform -->
+        <div class="slide">
+            <div class="slide-counter">5 / 36</div>
+            <h1>Need for Reform</h1>
+            <h2>Driving Forces Behind BNS 2023</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">164</div>
+                    <div>Years of IPC</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">511</div>
+                    <div>IPC Sections</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">358</div>
+                    <div>BNS Sections</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20</div>
+                    <div>New Offenses</div>
+                </div>
+            </div>
+
+            <h3>Key Reform Areas:</h3>
+            <ul>
+                <li><strong>Medical Advancements:</strong> New provisions for medical negligence</li>
+                <li><strong>Technological Shifts:</strong> Cyber crimes and digital evidence</li>
+                <li><strong>Socio-Cultural Understanding:</strong> Gender inclusivity and modern relationships</li>
+                <li><strong>Monetary Value:</strong> Updated fines matching current economic conditions</li>
+                <li><strong>Punishment Philosophy:</strong> Shift from punishment to reformation</li>
+            </ul>
+        </div>
+
+        <!-- Slide 6: Legislative Timeline -->
+        <div class="slide">
+            <div class="slide-counter">6 / 36</div>
+            <h1>Legislative Timeline</h1>
+            <h2>Journey from Bill to Law</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>August 11, 2023</h3>
+                    <p>Amit Shah introduces the Bharatiya Nyaya Sanhita Bill, 2023 in Lok Sabha</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>December 12, 2023</h3>
+                    <p>Original bill withdrawn and Bharatiya Nyaya (Second) Sanhita Bill, 2023 introduced</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>December 20, 2023</h3>
+                    <p>Bill passed in Lok Sabha</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>December 21, 2023</h3>
+                    <p>Bill passed in Rajya Sabha</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>December 25, 2023</h3>
+                    <p>President Droupadi Murmu gives assent to the bill</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>July 1, 2024</h3>
+                    <p><span class="highlight">BNS 2023 comes into effect</span>, replacing IPC 1860</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Key Statistics -->
+        <div class="slide">
+            <div class="slide-counter">7 / 36</div>
+            <h1>Key Statistics</h1>
+            <h2>BNS 2023 by Numbers</h2>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>Aspect</th>
+                    <th>IPC 1860</th>
+                    <th>BNS 2023</th>
+                    <th>Change</th>
+                </tr>
+                <tr>
+                    <td>Total Chapters</td>
+                    <td>23</td>
+                    <td>20</td>
+                    <td>-3</td>
+                </tr>
+                <tr>
+                    <td>Total Sections</td>
+                    <td>511</td>
+                    <td>358</td>
+                    <td>-153</td>
+                </tr>
+                <tr>
+                    <td>New Offenses Added</td>
+                    <td>-</td>
+                    <td>20</td>
+                    <td>+20</td>
+                </tr>
+                <tr>
+                    <td>Provisions Dropped</td>
+                    <td>-</td>
+                    <td>19</td>
+                    <td>-19</td>
+                </tr>
+                <tr>
+                    <td>Increased Imprisonment</td>
+                    <td>-</td>
+                    <td>33 offenses</td>
+                    <td>+33</td>
+                </tr>
+                <tr>
+                    <td>Increased Fines</td>
+                    <td>-</td>
+                    <td>83 offenses</td>
+                    <td>+83</td>
+                </tr>
+                <tr>
+                    <td>Mandatory Minimum Punishment</td>
+                    <td>-</td>
+                    <td>23 offenses</td>
+                    <td>+23</td>
+                </tr>
+                <tr>
+                    <td>Community Service</td>
+                    <td>0</td>
+                    <td>6 offenses</td>
+                    <td>+6</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Slide 8: Structure Comparison -->
+        <div class="slide">
+            <div class="slide-counter">8 / 36</div>
+            <h1>Structure and Organization</h1>
+            <h2>BNS 2023 Chapter-wise Breakdown</h2>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>Chapter</th>
+                    <th>Sections</th>
+                    <th>Classification of Offenses</th>
+                </tr>
+                <tr>
+                    <td>Chapter 1</td>
+                    <td>1-3</td>
+                    <td>Preliminary</td>
+                </tr>
+                <tr>
+                    <td>Chapter 2</td>
+                    <td>4-13</td>
+                    <td>Of Punishments</td>
+                </tr>
+                <tr>
+                    <td>Chapter 3</td>
+                    <td>14-44</td>
+                    <td>General Exceptions & Right to Private Defence</td>
+                </tr>
+                <tr>
+                    <td>Chapter 4</td>
+                    <td>45-62</td>
+                    <td>Abetment, Criminal Conspiracy and Attempt</td>
+                </tr>
+                <tr>
+                    <td>Chapter 5</td>
+                    <td>63-99</td>
+                    <td>Offenses against Women and Children</td>
+                </tr>
+                <tr>
+                    <td>Chapter 6</td>
+                    <td>100-115</td>
+                    <td>Of Offenses affecting the Human Body</td>
+                </tr>
+                <tr>
+                    <td>Chapter 7</td>
+                    <td>116-118</td>
+                    <td>Of Offenses relating to Religion</td>
+                </tr>
+                <tr>
+                    <td>Chapter 8</td>
+                    <td>119-124</td>
+                    <td>Of Offenses against the State</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Slide 9: Major Changes Overview -->
+        <div class="slide">
+            <div class="slide-counter">9 / 36</div>
+            <h1>Major Changes from IPC</h1>
+            <h2>Revolutionary Transformations</h2>
+            
+            <h3>🔄 Structural Changes</h3>
+            <ul>
+                <li><strong>Streamlined Structure:</strong> Reduced from 23 to 20 chapters</li>
+                <li><strong>Consolidated Sections:</strong> Decreased from 511 to 358 sections</li>
+                <li><strong>Better Organization:</strong> Logical grouping of related offenses</li>
+            </ul>
+
+            <h3>⚖️ Punishment Philosophy</h3>
+            <ul>
+                <li><strong>Community Service:</strong> Introduced as alternative punishment</li>
+                <li><strong>Increased Penalties:</strong> Higher fines and imprisonment terms</li>
+                <li><strong>Mandatory Minimums:</strong> For serious offenses</li>
+            </ul>
+
+            <h3>🏳️‍⚧️ Social Inclusivity</h3>
+            <ul>
+                <li><strong>Transgender Recognition:</strong> Explicitly included in gender definitions</li>
+                <li><strong>Gender-Neutral Language:</strong> Broader protection scope</li>
+                <li><strong>Child Protection:</strong> Enhanced provisions for all children</li>
+            </ul>
+        </div>
+
+        <!-- Slide 10: Sedition to Sovereignty -->
+        <div class="slide">
+            <div class="slide-counter">10 / 36</div>
+            <h1>Sedition to Sovereignty</h1>
+            <h2>Redefining Offenses Against the State</h2>
+            
+            <h3>❌ What's Removed: Section 124A (Sedition)</h3>
+            <ul>
+                <li>Colonial-era provision targeting dissent</li>
+                <li>Often misused to suppress free speech</li>
+                <li>Criticized for vague language</li>
+            </ul>
+
+            <h3>✅ What's Added: Acts Endangering Sovereignty</h3>
+            <p>BNS introduces new offenses for acts that:</p>
+            <ul>
+                <li><strong>Excite or attempt to excite:</strong>
+                    <ul>
+                        <li>Secession</li>
+                        <li>Armed rebellion</li>
+                        <li>Subversive activities</li>
+                    </ul>
+                </li>
+                <li><strong>Encourage feelings of:</strong>
+                    <ul>
+                        <li>Separatist activities</li>
+                    </ul>
+                </li>
+                <li><strong>Endanger:</strong>
+                    <ul>
+                        <li>Sovereignty of India</li>
+                        <li>Unity and integrity of India</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>⚠️ Criticism</h3>
+            <p>The new provision is considered <span class="highlight">ambiguous</span> with potential to curtail freedom of speech and stifle dissent.</p>
+        </div>
+
+        <!-- Slide 11: New Offense - Terrorism -->
+        <div class="slide">
+            <div class="slide-counter">11 / 36</div>
+            <h1>New Offense: Terrorism</h1>
+            <h2>Addressing Modern Security Threats</h2>
+            
+            <h3>📋 Definition of Terrorism in BNS</h3>
+            <p>An act that <strong>intends to</strong>:</p>
+            <ul>
+                <li><strong>Threaten:</strong>
+                    <ul>
+                        <li>Unity of the country</li>
+                        <li>Integrity of the country</li>
+                        <li>Security of the country</li>
+                    </ul>
+                </li>
+                <li><strong>Intimidate:</strong>
+                    <ul>
+                        <li>General public</li>
+                    </ul>
+                </li>
+                <li><strong>Disturb:</strong>
+                    <ul>
+                        <li>Public order</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>⚖️ Punishment</h3>
+            <ul>
+                <li><strong>Attempting terrorism:</strong> Specified penalties</li>
+                <li><strong>Committing terrorism:</strong> Enhanced punishment</li>
+            </ul>
+
+            <h3>⚠️ Concerns</h3>
+            <p>The broad definition including <span class="highlight">"intimidate public order"</span> may lead to local breaches of peace being qualified as terrorism.</p>
+        </div>
+
+        <!-- Slide 12: Organized Crime -->
+        <div class="slide">
+            <div class="slide-counter">12 / 36</div>
+            <h1>New Offense: Organized Crime</h1>
+            <h2>Tackling Systematic Criminal Activities</h2>
+            
+            <h3>📋 What Constitutes Organized Crime</h3>
+            <p>Crimes committed <strong>on behalf of a crime syndicate</strong> including:</p>
+            <ul>
+                <li><strong>Kidnapping</strong></li>
+                <li><strong>Extortion</strong></li>
+                <li><strong>Cyber-crime</strong></li>
+                <li><strong>Land grabbing</strong></li>
+                <li><strong>Financial fraud</strong></li>
+                <li><strong>Drug trafficking</strong></li>
+            </ul>
+
+            <h3>📋 Petty Organized Crime</h3>
+            <p>Also recognized as a separate offense category</p>
+
+            <h3>✅ Benefits</h3>
+            <ul>
+                <li><strong>Fills Legal Gap:</strong> Addresses crimes across states without special laws</li>
+                <li><strong>Uniform Application:</strong> Consistent approach nationwide</li>
+                <li><strong>Enhanced Coordination:</strong> Better inter-state cooperation</li>
+            </ul>
+
+            <h3>⚠️ Challenges</h3>
+            <ul>
+                <li><strong>Duplication:</strong> Overlaps with existing state laws</li>
+                <li><strong>Jurisdictional Issues:</strong> Multiple regulatory regimes</li>
+                <li><strong>Compliance Costs:</strong> Additional burden on law enforcement</li>
+            </ul>
+        </div>
+
+        <!-- Slide 13: Mob Lynching -->
+        <div class="slide">
+            <div class="slide-counter">13 / 36</div>
+            <h1>New Offense: Mob Lynching</h1>
+            <h2>Addressing Group Violence</h2>
+            
+            <h3>📋 Definition</h3>
+            <p><strong>Murder by a group of five or more persons</strong> on grounds of certain identity markers:</p>
+            <ul>
+                <li><strong>Race</strong></li>
+                <li><strong>Caste</strong></li>
+                <li><strong>Community</strong></li>
+                <li><strong>Sex</strong></li>
+                <li><strong>Gender</strong></li>
+                <li><strong>Sexual orientation</strong></li>
+                <li><strong>Language</strong></li>
+                <li><strong>Personal belief</strong></li>
+            </ul>
+
+            <h3>⚖️ Punishment</h3>
+            <ul>
+                <li><strong>Minimum:</strong> 7 years imprisonment</li>
+                <li><strong>Maximum:</strong> Life imprisonment or death penalty</li>
+            </ul>
+
+            <h3>🤔 Criticism</h3>
+            <p>The punishment for mob lynching is <span class="highlight">lower than regular murder</span>, which has drawn criticism from legal experts.</p>
+
+            <h3>✅ Significance</h3>
+            <p>First time <strong>mob lynching</strong> is explicitly criminalized in Indian law, addressing a growing social concern.</p>
+        </div>
+
+        <!-- Slide 14: Gender Inclusivity -->
+        <div class="slide">
+            <div class="slide-counter">14 / 36</div>
+            <h1>Gender Inclusivity</h1>
+            <h2>Progressive Recognition of All Genders</h2>
+            
+            <h3>🏳️‍⚧️ Transgender Recognition</h3>
+            <p><strong>Section 2(10)</strong> of BNS specifically recognizes <span class="highlight">'transgender'</span> as a gender alongside 'men' and 'women'</p>
+
+            <h3>📊 Comparison with IPC</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Aspect</th>
+                    <th>IPC 1860</th>
+                    <th>BNS 2023</th>
+                </tr>
+                <tr>
+                    <td>Gender Recognition</td>
+                    <td>Only 'men' and 'women'</td>
+                    <td>'men', 'women', and 'transgender'</td>
+                </tr>
+                <tr>
+                    <td>Child Protection</td>
+                    <td>Section 366A - minor girls only</td>
+                    <td>Section 96 - any child (gender-neutral)</td>
+                </tr>
+                <tr>
+                    <td>Pronoun Usage</td>
+                    <td>Binary gender references</td>
+                    <td>Inclusive pronoun system</td>
+                </tr>
+            </table>
+
+            <h3>⚖️ Legal Precedent</h3>
+            <p>Aligns with the Supreme Court's landmark judgment in <strong>NALSA vs. UOI (2014)</strong> recognizing transgender rights and self-identification.</p>
+
+            <h3>🎯 Impact</h3>
+            <ul>
+                <li><strong>Gender-neutral ambit</strong> for specific offenses</li>
+                <li><strong>Enhanced protection</strong> for all children regardless of gender</li>
+                <li><strong>Progressive legal framework</strong> reflecting social evolution</li>
+            </ul>
+        </div>
+
+        <!-- Slide 15: Technology Integration -->
+        <div class="slide">
+            <div class="slide-counter">15 / 36</div>
+            <h1>Technology Integration</h1>
+            <h2>Adapting Law to Digital Age</h2>
+            
+            <h3>💻 Digital Evidence Recognition</h3>
+            <p><strong>Section 2(8)</strong> - Reference to 'documents' now includes:</p>
+            <ul>
+                <li><strong>Electronic records</strong></li>
+                <li><strong>Digital records</strong></li>
+                <li><strong>Online communications</strong></li>
+                <li><strong>Digital transactions</strong></li>
+            </ul>
+
+            <h3>🌐 Cyber Crime Provisions</h3>
+            <ul>
+                <li><strong>Enhanced coverage</strong> of cyber offenses</li>
+                <li><strong>Digital fraud</strong> recognition</li>
+                <li><strong>Online harassment</strong> provisions</li>
+                <li><strong>Identity theft</strong> in digital space</li>
+            </ul>
+
+            <h3>⚖️ Legal Implications</h3>
+            <ul>
+                <li><strong>Handling of electronic records</strong></li>
+                <li><strong>Different legal implications</strong> for digital vs. physical evidence</li>
+                <li><strong>Technological aspects</strong> and potential glitches</li>
+                <li><strong>Cross-border cyber crimes</strong></li>
+            </ul>
+
+            <h3>🔮 Future Challenges</h3>
+            <ul>
+                <li><strong>Rapid technological evolution</strong></li>
+                <li><strong>AI and machine learning crimes</strong></li>
+                <li><strong>Blockchain and cryptocurrency</strong> related offenses</li>
+                <li><strong>Deep fake and digital manipulation</strong></li>
+            </ul>
+        </div>
+
+        <!-- Slide 16: Medical Negligence -->
+        <div class="slide">
+            <div class="slide-counter">16 / 36</div>
+            <h1>Medical Negligence</h1>
+            <h2>Specific Provisions for Healthcare</h2>
+            
+            <h3>🏥 New Provision: Section 106(1)</h3>
+            <p>Provides <strong>separate and specific reference</strong> to death caused by negligence of a medical practitioner during medical procedures.</p>
+
+            <h3>📋 Key Features</h3>
+            <ul>
+                <li><strong>Specific Recognition:</strong> Medical negligence as distinct offense</li>
+                <li><strong>Professional Context:</strong> Acknowledges medical practice complexities</li>
+                <li><strong>Procedural Focus:</strong> Covers negligence during medical procedures</li>
+            </ul>
+
+            <h3>⚖️ Legal Implications</h3>
+            <ul>
+                <li><strong>Clear Guidelines:</strong> For medical professionals</li>
+                <li><strong>Patient Protection:</strong> Enhanced rights for victims</li>
+                <li><strong>Professional Standards:</strong> Encourages better medical practices</li>
+            </ul>
+
+            <h3>🤔 Considerations</h3>
+            <ul>
+                <li><strong>Medical Judgment:</strong> Distinguishing negligence from medical judgment</li>
+                <li><strong>Evidence Standards:</strong> Proving medical negligence</li>
+                <li><strong>Professional Impact:</strong> Effect on medical practice</li>
+            </ul>
+
+            <h3>🎯 Objective</h3>
+            <p>Balance between <span class="highlight">patient protection</span> and <span class="highlight">medical professional rights</span></p>
+        </div>
+
+        <!-- Slide 17: Section 377 Removal -->
+        <div class="slide">
+            <div class="slide-counter">17 / 36</div>
+            <h1>Section 377 Removal</h1>
+            <h2>Eliminating Discriminatory Provisions</h2>
+            
+            <h3>❌ What Was Removed</h3>
+            <p><strong>Section 377 of IPC</strong> - "Unnatural offenses" provision that criminalized:</p>
+            <ul>
+                <li><strong>Consensual same-sex relations</strong> (already struck down by Supreme Court)</li>
+                <li><strong>Non-consensual same-sex acts</strong></li>
+                <li><strong>Bestiality</strong></li>
+            </ul>
+
+            <h3>⚖️ Supreme Court Context</h3>
+            <p>Section 377 was partially read down in <strong>Navtej Singh Johar vs. UOI (2018)</strong>:</p>
+            <ul>
+                <li><strong>Decriminalized:</strong> Consensual same-sex relations between adults</li>
+                <li><strong>Retained:</strong> Non-consensual acts and bestiality</li>
+            </ul>
+
+            <h3>🚨 Legal Gap Created</h3>
+            <p>Complete removal of Section 377 means:</p>
+            <ul>
+                <li><strong>No provision for rape of men</strong></li>
+                <li><strong>No provision for bestiality</strong></li>
+                <li><strong>Legal protection gap</strong> for male victims</li>
+            </ul>
+
+            <h3>🤔 Criticism</h3>
+            <p>Legal experts argue that BNS should have:</p>
+            <ul>
+                <li><strong>Retained non-consensual provisions</strong></li>
+                <li><strong>Created gender-neutral rape laws</strong></li>
+                <li><strong>Maintained bestiality as offense</strong></li>
+            </ul>
+        </div>
+
+        <!-- Slide 18: Community Service -->
+        <div class="slide">
+            <div class="slide-counter">18 / 36</div>
+            <h1>Community Service</h1>
+            <h2>Alternative Punishment Approach</h2>
+            
+            <h3>🆕 New Punishment Form</h3>
+            <p>BNS introduces <span class="highlight">community service</span> as a form of punishment for <strong>6 specific offenses</strong></p>
+
+            <h3>🎯 Philosophy</h3>
+            <ul>
+                <li><strong>Restorative Justice:</strong> Focus on rehabilitation over punishment</li>
+                <li><strong>Social Contribution:</strong> Offenders give back to society</li>
+                <li><strong>Cost-Effective:</strong> Reduces burden on prison system</li>
+                <li><strong>Skill Development:</strong> Opportunity for offender reformation</li>
+            </ul>
+
+            <h3>📋 Applicable Offenses</h3>
+            <p>Community service can be imposed for:</p>
+            <ul>
+                <li><strong>Minor offenses</strong> with social impact</li>
+                <li><strong>First-time offenders</strong> in specific categories</li>
+                <li><strong>Offenses where rehabilitation</strong> is more effective than imprisonment</li>
+            </ul>
+
+            <h3>✅ Benefits</h3>
+            <ul>
+                <li><strong>Reduced Recidivism:</strong> Lower chances of repeat offenses</li>
+                <li><strong>Social Integration:</strong> Maintains offender's social connections</li>
+                <li><strong>Economic Efficiency:</strong> Lower cost than imprisonment</li>
+                <li><strong>Victim Satisfaction:</strong> Tangible benefit to society</li>
+            </ul>
+
+            <h3>⚠️ Implementation Challenges</h3>
+            <ul>
+                <li><strong>Monitoring mechanisms</strong></li>
+                <li><strong>Quality control</strong> of community service</li>
+                <li><strong>Standardization</strong> across jurisdictions</li>
+            </ul>
+        </div>
+
+        <!-- Slide 19: Enhanced Punishments -->
+        <div class="slide">
+            <div class="slide-counter">19 / 36</div>
+            <h1>Enhanced Punishments</h1>
+            <h2>Stricter Penalties for Serious Crimes</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">33</div>
+                    <div>Offenses with Increased Imprisonment</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">83</div>
+                    <div>Offenses with Increased Fines</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">23</div>
+                    <div>Offenses with Mandatory Minimum</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6</div>
+                    <div>Offenses with Community Service</div>
+                </div>
+            </div>
+
+            <h3>💰 Fine Adjustments</h3>
+            <ul>
+                <li><strong>Inflation Adjustment:</strong> Fines updated to match current monetary values</li>
+                <li><strong>Deterrent Effect:</strong> Higher fines to discourage crimes</li>
+                <li><strong>Economic Crimes:</strong> Proportionate penalties for financial offenses</li>
+            </ul>
+
+            <h3>⏰ Mandatory Minimum Sentences</h3>
+            <ul>
+                <li><strong>Serious Crimes:</strong> Ensures minimum punishment for grave offenses</li>
+                <li><strong>Judicial Discretion:</strong> Balanced with maximum limits</li>
+                <li><strong>Consistency:</strong> Uniform application across courts</li>
+            </ul>
+
+            <h3>🎯 Rationale</h3>
+            <ul>
+                <li><strong>Deterrence:</strong> Stronger penalties to prevent crimes</li>
+                <li><strong>Justice:</strong> Proportionate punishment for victims</li>
+                <li><strong>Social Protection:</strong> Keeping dangerous offenders away longer</li>
+            </ul>
+        </div>
+
+        <!-- Slide 20: Women and Children Protection -->
+        <div class="slide">
+            <div class="slide-counter">20 / 36</div>
+            <h1>Women and Children Protection</h1>
+            <h2>Chapter 5: Dedicated Protection Framework</h2>
+            
+            <h3>📋 Chapter 5 Structure</h3>
+            <p><strong>Sections 63-99:</strong> Offenses against Women and Children</p>
+            <ul>
+                <li><strong>Sections 63-73:</strong> Sexual Offenses</li>
+                <li><strong>Sections 74-79:</strong> Criminal force and assault against women</li>
+                <li><strong>Sections 80+:</strong> Marriage-related offenses</li>
+                <li><strong>Additional:</strong> Miscarriage and crimes against children</li>
+            </ul>
+
+            <h3>🆕 New Provisions</h3>
+            <ul>
+                <li><strong>Gang Rape Age Threshold:</strong> Increased from 16 to 18 years</li>
+                <li><strong>Deceitful Sexual Intercourse:</strong> Sex by false promises criminalized</li>
+                <li><strong>Enhanced Child Protection:</strong> Gender-neutral provisions</li>
+            </ul>
+
+            <h3>⚖️ Retained Issues</h3>
+            <ul>
+                <li><strong>Marital Rape Exception:</strong> Still not criminalized</li>
+                <li><strong>"Outraging Modesty":</strong> Value-laden phrase retained</li>
+                <li><strong>Male Rape:</strong> No specific provisions</li>
+                <li><strong>Transgender Protection:</strong> Limited coverage in sexual offenses</li>
+            </ul>
+
+            <h3>🤔 Criticism</h3>
+            <p>Clubbing women and children together draws criticism for:</p>
+            <ul>
+                <li><strong>Infantilizing women</strong></li>
+                <li><strong>Different vulnerability contexts</strong></li>
+                <li><strong>Distinct legal needs</strong></li>
+            </ul>
+        </div>
+
+        <!-- Slide 21: Hit and Run Cases -->
+        <div class="slide">
+            <div class="slide-counter">21 / 36</div>
+            <h1>Hit and Run Cases</h1>
+            <h2>Section 106(2) - On Hold</h2>
+            
+            <h3>🚗 Section 106(2) Provision</h3>
+            <p>Deals with <strong>death caused by rash and negligent driving</strong> - commonly known as hit and run cases</p>
+
+            <h3>⏸️ Current Status</h3>
+            <ul>
+                <li><strong>On Hold:</strong> Section 106(2) is not yet in effect</li>
+                <li><strong>Implementation Date:</strong> To be announced</li>
+                <li><strong>Reason:</strong> Need for detailed guidelines and infrastructure</li>
+            </ul>
+
+            <h3>📋 Proposed Features</h3>
+            <ul>
+                <li><strong>Enhanced Penalties:</strong> Stricter punishment for hit and run</li>
+                <li><strong>Immediate Reporting:</strong> Mandatory reporting requirements</li>
+                <li><strong>Victim Assistance:</strong> Provisions for immediate help</li>
+            </ul>
+
+            <h3>🚧 Implementation Challenges</h3>
+            <ul>
+                <li><strong>Infrastructure:</strong> Need for better accident response systems</li>
+                <li><strong>Training:</strong> Law enforcement preparation required</li>
+                <li><strong>Technology:</strong> Digital systems for quick reporting</li>
+                <li><strong>Coordination:</strong> Between police, hospitals, and insurance</li>
+            </ul>
+
+            <h3>🎯 Expected Impact</h3>
+            <ul>
+                <li><strong>Reduced Hit and Run:</strong> Deterrent effect</li>
+                <li><strong>Better Victim Care:</strong> Faster medical assistance</li>
+                <li><strong>Accountability:</strong> Improved driver responsibility</li>
+            </ul>
+        </div>
+
+        <!-- Slide 22: Implementation Challenges -->
+        <div class="slide">
+            <div class="slide-counter">22 / 36</div>
+            <h1>Implementation Challenges</h1>
+            <h2>Practical Roadblocks and Solutions</h2>
+            
+            <h3>🚧 Logistic Roadblocks</h3>
+            <ul>
+                <li><strong>Technology Integration:</strong>
+                    <ul>
+                        <li>Digital evidence handling</li>
+                        <li>Electronic record management</li>
+                        <li>Cyber crime investigation capabilities</li>
+                    </ul>
+                </li>
+                <li><strong>Training Requirements:</strong>
+                    <ul>
+                        <li>Police force education on new provisions</li>
+                        <li>Judicial training on updated laws</li>
+                        <li>Legal practitioner orientation</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>⚖️ Legal Complexities</h3>
+            <ul>
+                <li><strong>Overlapping Laws:</strong>
+                    <ul>
+                        <li>Duplication with state-specific laws</li>
+                        <li>Multiple regulatory regimes</li>
+                        <li>Jurisdictional conflicts</li>
+                    </ul>
+                </li>
+                <li><strong>Interpretation Issues:</strong>
+                    <ul>
+                        <li>Ambiguous definitions (terrorism, sovereignty)</li>
+                        <li>Judicial interpretation variations</li>
+                        <li>Precedent establishment needs</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>💰 Resource Requirements</h3>
+            <ul>
+                <li><strong>Infrastructure:</strong> Court systems, police stations</li>
+                <li><strong>Technology:</strong> Digital evidence labs, cyber crime units</li>
+                <li><strong>Human Resources:</strong> Trained personnel at all levels</li>
+            </ul>
+        </div>
+
+        <!-- Slide 23: Criticisms and Concerns -->
+        <div class="slide">
+            <div class="slide-counter">23 / 36</div>
+            <h1>Criticisms and Concerns</h1>
+            <h2>Expert Analysis and Feedback</h2>
+            
+            <h3>🗣️ Freedom of Speech Concerns</h3>
+            <ul>
+                <li><strong>Sovereignty Provision:</strong> Ambiguous language may curtail free speech</li>
+                <li><strong>Terrorism Definition:</strong> Broad scope could criminalize dissent</li>
+                <li><strong>Protest Rights:</strong> Potential impact on democratic protests</li>
+            </ul>
+
+            <h3>⚖️ Gender Justice Issues</h3>
+            <ul>
+                <li><strong>Marital Rape:</strong> Exception still maintained</li>
+                <li><strong>Male Victims:</strong> No provisions for rape of men</li>
+                <li><strong>Transgender Rights:</strong> Limited protection in sexual offenses</li>
+                <li><strong>"Outraging Modesty":</strong> Outdated terminology retained</li>
+            </ul>
+
+            <h3>🎯 Punishment Philosophy</h3>
+            <ul>
+                <li><strong>Academic Criticism:</strong> Professor Faisal Fasih notes lack of justice-oriented approach</li>
+                <li><strong>Punishment vs. Reformation:</strong> Still punishment-focused despite claims</li>
+                <li><strong>Mob Lynching Penalty:</strong> Lower than regular murder punishment</li>
+            </ul>
+
+            <h3>📋 Legal Gaps</h3>
+            <ul>
+                <li><strong>Section 377 Removal:</strong> Creates protection gaps</li>
+                <li><strong>Bestiality:</strong> No longer criminalized</li>
+                <li><strong>Non-consensual Imagery:</strong> Inadequate protection</li>
+            </ul>
+        </div>
+
+        <!-- Slide 24: International Comparison -->
+        <div class="slide">
+            <div class="slide-counter">24 / 36</div>
+            <h1>International Comparison</h1>
+            <h2>BNS in Global Context</h2>
+            
+            <h3>🌍 Age of Criminal Responsibility</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Country/System</th>
+                    <th>Age of Criminal Responsibility</th>
+                    <th>BNS 2023</th>
+                </tr>
+                <tr>
+                    <td>International Convention</td>
+                    <td>Recommends higher age</td>
+                    <td>7-12 years (retained from IPC)</td>
+                </tr>
+                <tr>
+                    <td>UK</td>
+                    <td>10 years</td>
+                    <td>7 years</td>
+                </tr>
+                <tr>
+                    <td>USA</td>
+                    <td>Varies by state (6-12 years)</td>
+                    <td>7 years</td>
+                </tr>
+                <tr>
+                    <td>Germany</td>
+                    <td>14 years</td>
+                    <td>7 years</td>
+                </tr>
+            </table>
+
+            <h3>🏳️‍⚧️ Gender Recognition</h3>
+            <ul>
+                <li><strong>Progressive:</strong> Explicit transgender recognition</li>
+                <li><strong>Alignment:</strong> With international human rights standards</li>
+                <li><strong>Limitation:</strong> Still gaps in comprehensive protection</li>
+            </ul>
+
+            <h3>💻 Cyber Crime Provisions</h3>
+            <ul>
+                <li><strong>Modern Approach:</strong> Recognition of digital evidence</li>
+                <li><strong>Global Trend:</strong> Aligns with international cyber law developments</li>
+                <li><strong>Challenge:</strong> Keeping pace with rapid technological change</li>
+            </ul>
+        </div>
+
+        <!-- Slide 25: Impact on Legal System -->
+        <div class="slide">
+            <div class="slide-counter">25 / 36</div>
+            <h1>Impact on Legal System</h1>
+            <h2>Transforming Indian Justice</h2>
+            
+            <h3>⚖️ Judicial Impact</h3>
+            <ul>
+                <li><strong>Case Law Development:</strong> New precedents needed for new provisions</li>
+                <li><strong>Judicial Training:</strong> Judges need orientation on updated laws</li>
+                <li><strong>Interpretation Challenges:</strong> Ambiguous provisions require clarification</li>
+                <li><strong>Sentencing Guidelines:</strong> New punishment frameworks</li>
+            </ul>
+
+            <h3>👮 Law Enforcement Changes</h3>
+            <ul>
+                <li><strong>Investigation Procedures:</strong> Updated for new offenses</li>
+                <li><strong>Digital Evidence:</strong> New protocols for electronic records</li>
+                <li><strong>Specialized Units:</strong> Cyber crime and organized crime divisions</li>
+                <li><strong>Training Programs:</strong> Comprehensive police education</li>
+            </ul>
+
+            <h3>👨‍💼 Legal Profession Impact</h3>
+            <ul>
+                <li><strong>Practice Areas:</strong> New specializations emerging</li>
+                <li><strong>Legal Education:</strong> Law schools updating curricula</li>
+                <li><strong>Client Advisory:</strong> Lawyers need to understand new provisions</li>
+                <li><strong>Litigation Strategy:</strong> New approaches for defense and prosecution</li>
+            </ul>
+
+            <h3>📊 Statistical Expectations</h3>
+            <ul>
+                <li><strong>Case Volume:</strong> Potential increase in certain offense categories</li>
+                <li><strong>Conviction Rates:</strong> May change due to new evidence rules</li>
+                <li><strong>Sentencing Patterns:</strong> Shift due to enhanced penalties</li>
+            </ul>
+        </div>
+
+        <!-- Slide 26: Social Impact -->
+        <div class="slide">
+            <div class="slide-counter">26 / 36</div>
+            <h1>Social Impact</h1>
+            <h2>BNS and Society</h2>
+            
+            <h3>👥 Public Awareness</h3>
+            <ul>
+                <li><strong>Legal Literacy:</strong> Need for public education on new laws</li>
+                <li><strong>Rights Awareness:</strong> Understanding of enhanced protections</li>
+                <li><strong>Responsibility:</strong> Citizens' duties under new provisions</li>
+            </ul>
+
+            <h3>🏳️‍⚧️ LGBTQ+ Community</h3>
+            <ul>
+                <li><strong>Positive:</strong> Transgender recognition in legal framework</li>
+                <li><strong>Limitation:</strong> Gaps in comprehensive protection</li>
+                <li><strong>Future Scope:</strong> Potential for further inclusive amendments</li>
+            </ul>
+
+            <h3>👩 Women's Rights</h3>
+            <ul>
+                <li><strong>Enhanced Protection:</strong> Stronger provisions against gender-based violence</li>
+                <li><strong>Persistent Issues:</strong> Marital rape exception continues</li>
+                <li><strong>Mixed Reception:</strong> Progress with limitations</li>
+            </ul>
+
+            <h3>🧒 Child Protection</h3>
+            <ul>
+                <li><strong>Gender-Neutral:</strong> Protection for all children regardless of gender</li>
+                <li><strong>Enhanced Penalties:</strong> Stricter punishment for crimes against children</li>
+                <li><strong>Comprehensive Coverage:</strong> Broader scope of protection</li>
+            </ul>
+
+            <h3>💻 Digital Society</h3>
+            <ul>
+                <li><strong>Cyber Awareness:</strong> Recognition of digital crimes</li>
+                <li><strong>Online Safety:</strong> Legal framework for digital protection</li>
+                <li><strong>Technology Adoption:</strong> Legal system adapting to digital age</li>
+            </ul>
+        </div>
+
+        <!-- Slide 27: Economic Implications -->
+        <div class="slide">
+            <div class="slide-counter">27 / 36</div>
+            <h1>Economic Implications</h1>
+            <h2>Financial Impact of BNS 2023</h2>
+            
+            <h3>💰 Implementation Costs</h3>
+            <ul>
+                <li><strong>Training Expenses:</strong>
+                    <ul>
+                        <li>Police force training programs</li>
+                        <li>Judicial education initiatives</li>
+                        <li>Legal profession orientation</li>
+                    </ul>
+                </li>
+                <li><strong>Infrastructure Investment:</strong>
+                    <ul>
+                        <li>Digital evidence laboratories</li>
+                        <li>Cyber crime investigation units</li>
+                        <li>Court technology upgrades</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>📈 Revenue Impact</h3>
+            <ul>
+                <li><strong>Increased Fines:</strong> Higher revenue from 83 offenses with enhanced fines</li>
+                <li><strong>Deterrent Effect:</strong> Potential reduction in crime rates</li>
+                <li><strong>Economic Crimes:</strong> Better recovery in financial fraud cases</li>
+            </ul>
+
+            <h3>🏢 Business Impact</h3>
+            <ul>
+                <li><strong>Compliance Costs:</strong> Businesses adapting to new cyber crime provisions</li>
+                <li><strong>Legal Services:</strong> Increased demand for legal consultation</li>
+                <li><strong>Technology Sector:</strong> Growth in legal tech solutions</li>
+            </ul>
+
+            <h3>⚖️ Justice System Efficiency</h3>
+            <ul>
+                <li><strong>Community Service:</strong> Cost-effective alternative to imprisonment</li>
+                <li><strong>Streamlined Procedures:</strong> Reduced sections may improve efficiency</li>
+                <li><strong>Digital Evidence:</strong> Faster case processing with electronic records</li>
+            </ul>
+        </div>
+
+        <!-- Slide 28: Future Prospects -->
+        <div class="slide">
+            <div class="slide-counter">28 / 36</div>
+            <h1>Future Prospects</h1>
+            <h2>Evolution and Amendments</h2>
+            
+            <h3>🔮 Anticipated Developments</h3>
+            <ul>
+                <li><strong>Section 106(2) Implementation:</strong> Hit and run provisions activation</li>
+                <li><strong>Judicial Precedents:</strong> Supreme Court interpretations of new provisions</li>
+                <li><strong>Amendment Needs:</strong> Based on implementation experience</li>
+            </ul>
+
+            <h3>📋 Potential Amendments</h3>
+            <ul>
+                <li><strong>Gender Justice:</strong>
+                    <ul>
+                        <li>Marital rape criminalization</li>
+                        <li>Gender-neutral rape laws</li>
+                        <li>Enhanced transgender protection</li>
+                    </ul>
+                </li>
+                <li><strong>Technology Crimes:</strong>
+                    <ul>
+                        <li>AI-related offenses</li>
+                        <li>Cryptocurrency crimes</li>
+                        <li>Deep fake regulations</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>🌐 International Alignment</h3>
+            <ul>
+                <li><strong>Global Standards:</strong> Alignment with international criminal law</li>
+                <li><strong>Cross-border Crimes:</strong> Enhanced cooperation mechanisms</li>
+                <li><strong>Human Rights:</strong> Better compliance with international conventions</li>
+            </ul>
+
+            <h3>📊 Monitoring and Evaluation</h3>
+            <ul>
+                <li><strong>Impact Assessment:</strong> Regular evaluation of BNS effectiveness</li>
+                <li><strong>Statistical Analysis:</strong> Crime rate and conviction data</li>
+                <li><strong>Stakeholder Feedback:</strong> Input from legal professionals and civil society</li>
+            </ul>
+        </div>
+
+        <!-- Slide 29: Comparison Summary -->
+        <div class="slide">
+            <div class="slide-counter">29 / 36</div>
+            <h1>IPC vs BNS: Summary</h1>
+            <h2>Key Differences at a Glance</h2>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>Aspect</th>
+                    <th>IPC 1860</th>
+                    <th>BNS 2023</th>
+                </tr>
+                <tr>
+                    <td><strong>Origin</strong></td>
+                    <td>Colonial-era law by Macaulay</td>
+                    <td>Indigenous law by Indian Parliament</td>
+                </tr>
+                <tr>
+                    <td><strong>Philosophy</strong></td>
+                    <td>Punishment-oriented</td>
+                    <td>Justice and reformation-oriented</td>
+                </tr>
+                <tr>
+                    <td><strong>Structure</strong></td>
+                    <td>23 chapters, 511 sections</td>
+                    <td>20 chapters, 358 sections</td>
+                </tr>
+                <tr>
+                    <td><strong>Gender Recognition</strong></td>
+                    <td>Binary (men/women)</td>
+                    <td>Inclusive (men/women/transgender)</td>
+                </tr>
+                <tr>
+                    <td><strong>Technology</strong></td>
+                    <td>Limited cyber crime provisions</td>
+                    <td>Comprehensive digital crime coverage</td>
+                </tr>
+                <tr>
+                    <td><strong>Sedition</strong></td>
+                    <td>Section 124A (Sedition)</td>
+                    <td>Acts endangering sovereignty</td>
+                </tr>
+                <tr>
+                    <td><strong>New Crimes</strong></td>
+                    <td>-</td>
+                    <td>Terrorism, Organized crime, Mob lynching</td>
+                </tr>
+                <tr>
+                    <td><strong>Punishment Options</strong></td>
+                    <td>Traditional penalties</td>
+                    <td>Includes community service</td>
+                </tr>
+                <tr>
+                    <td><strong>Section 377</strong></td>
+                    <td>Unnatural offenses</td>
+                    <td>Completely removed</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Slide 30: Key Stakeholders -->
+        <div class="slide">
+            <div class="slide-counter">30 / 36</div>
+            <h1>Key Stakeholders</h1>
+            <h2>Who is Affected by BNS 2023?</h2>
+            
+            <h3>⚖️ Legal System</h3>
+            <ul>
+                <li><strong>Judges:</strong> Need training on new provisions and interpretations</li>
+                <li><strong>Lawyers:</strong> Must understand new offenses and procedures</li>
+                <li><strong>Law Students:</strong> Updated curriculum and legal education</li>
+                <li><strong>Legal Researchers:</strong> New areas of study and analysis</li>
+            </ul>
+
+            <h3>👮 Law Enforcement</h3>
+            <ul>
+                <li><strong>Police Officers:</strong> Training on new investigation procedures</li>
+                <li><strong>Cyber Crime Units:</strong> Enhanced role in digital investigations</li>
+                <li><strong>Forensic Experts:</strong> Digital evidence handling capabilities</li>
+                <li><strong>Prison Administration:</strong> Community service implementation</li>
+            </ul>
+
+            <h3>👥 Civil Society</h3>
+            <ul>
+                <li><strong>Citizens:</strong> Understanding rights and responsibilities</li>
+                <li><strong>Victims:</strong> Enhanced protection and justice mechanisms</li>
+                <li><strong>LGBTQ+ Community:</strong> Transgender recognition benefits</li>
+                <li><strong>Women and Children:</strong> Strengthened protection framework</li>
+            </ul>
+
+            <h3>🏢 Business and Technology</h3>
+            <ul>
+                <li><strong>IT Companies:</strong> Cyber crime compliance requirements</li>
+                <li><strong>Healthcare:</strong> Medical negligence provisions impact</li>
+                <li><strong>Legal Tech:</strong> Opportunities for digital solutions</li>
+                <li><strong>Media:</strong> Reporting on sovereignty-related provisions</li>
+            </ul>
+        </div>
+
+        <!-- Slide 31: Implementation Timeline -->
+        <div class="slide">
+            <div class="slide-counter">31 / 36</div>
+            <h1>Implementation Timeline</h1>
+            <h2>Phased Rollout Strategy</h2>
+            
+            <h3>✅ Phase 1: Immediate Implementation (July 1, 2024)</h3>
+            <ul>
+                <li><strong>Core Provisions:</strong> Most BNS sections became effective</li>
+                <li><strong>Basic Training:</strong> Initial police and judicial orientation</li>
+                <li><strong>Legal Practice:</strong> Lawyers began using new provisions</li>
+                <li><strong>Case Filing:</strong> New cases under BNS framework</li>
+            </ul>
+
+            <h3>⏳ Phase 2: Ongoing (2024-2025)</h3>
+            <ul>
+                <li><strong>Comprehensive Training:</strong> Detailed education programs</li>
+                <li><strong>Infrastructure Development:</strong> Technology and facility upgrades</li>
+                <li><strong>Precedent Setting:</strong> Initial court interpretations</li>
+                <li><strong>Public Awareness:</strong> Citizen education campaigns</li>
+            </ul>
+
+            <h3>🔮 Phase 3: Future Implementation</h3>
+            <ul>
+                <li><strong>Section 106(2):</strong> Hit and run provisions activation</li>
+                <li><strong>Advanced Training:</strong> Specialized skill development</li>
+                <li><strong>System Optimization:</strong> Based on initial experience</li>
+                <li><strong>Potential Amendments:</strong> Legislative refinements</li>
+            </ul>
+
+            <h3>📊 Success Metrics</h3>
+            <ul>
+                <li><strong>Case Processing Time:</strong> Efficiency improvements</li>
+                <li><strong>Conviction Rates:</strong> Justice delivery effectiveness</li>
+                <li><strong>Crime Deterrence:</strong> Prevention impact measurement</li>
+                <li><strong>Stakeholder Satisfaction:</strong> User experience feedback</li>
+            </ul>
+        </div>
+
+        <!-- Slide 32: Global Context -->
+        <div class="slide">
+            <div class="slide-counter">32 / 36</div>
+            <h1>Global Context</h1>
+            <h2>BNS in International Perspective</h2>
+            
+            <h3>🌍 Criminal Law Reform Trends</h3>
+            <ul>
+                <li><strong>Decolonization:</strong> Many countries updating colonial-era laws</li>
+                <li><strong>Technology Integration:</strong> Global trend toward cyber crime legislation</li>
+                <li><strong>Human Rights:</strong> Enhanced protection for marginalized groups</li>
+                <li><strong>Restorative Justice:</strong> Shift from punishment to rehabilitation</li>
+            </ul>
+
+            <h3>📊 Comparative Analysis</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Country</th>
+                    <th>Recent Criminal Law Reform</th>
+                    <th>Key Features</th>
+                </tr>
+                <tr>
+                    <td>Canada</td>
+                    <td>Criminal Code modernization</td>
+                    <td>LGBTQ+ rights, cyber crimes</td>
+                </tr>
+                <tr>
+                    <td>Australia</td>
+                    <td>Commonwealth Criminal Code</td>
+                    <td>Terrorism, organized crime</td>
+                </tr>
+                <tr>
+                    <td>South Africa</td>
+                    <td>Post-apartheid criminal law</td>
+                    <td>Human rights focus</td>
+                </tr>
+                <tr>
+                    <td>Germany</td>
+                    <td>StGB amendments</td>
+                    <td>Digital crimes, hate crimes</td>
+                </tr>
+            </table>
+
+            <h3>🎯 India's Unique Approach</h3>
+            <ul>
+                <li><strong>Complete Replacement:</strong> Unlike incremental amendments</li>
+                <li><strong>Cultural Context:</strong> Indian values and social structure</li>
+                <li><strong>Linguistic Identity:</strong> Sanskrit-derived nomenclature</li>
+                <li><strong>Comprehensive Scope:</strong> Addressing multiple contemporary issues</li>
+            </ul>
+        </div>
+
+        <!-- Slide 33: Lessons Learned -->
+        <div class="slide">
+            <div class="slide-counter">33 / 36</div>
+            <h1>Lessons Learned</h1>
+            <h2>Early Implementation Insights</h2>
+            
+            <h3>✅ Positive Outcomes</h3>
+            <ul>
+                <li><strong>Smooth Transition:</strong> Legal system adapted relatively well</li>
+                <li><strong>Technology Adoption:</strong> Digital evidence handling improved</li>
+                <li><strong>Awareness Increase:</strong> Public interest in criminal law</li>
+                <li><strong>Professional Development:</strong> Legal profession skill enhancement</li>
+            </ul>
+
+            <h3>⚠️ Challenges Encountered</h3>
+            <ul>
+                <li><strong>Training Gaps:</strong> Insufficient preparation time for some stakeholders</li>
+                <li><strong>Interpretation Issues:</strong> Ambiguity in certain provisions</li>
+                <li><strong>Resource Constraints:</strong> Limited infrastructure in some areas</li>
+                <li><strong>Coordination Problems:</strong> Between different agencies</li>
+            </ul>
+
+            <h3>📚 Best Practices Identified</h3>
+            <ul>
+                <li><strong>Comprehensive Training:</strong> Multi-level education programs</li>
+                <li><strong>Stakeholder Engagement:</strong> Regular consultation and feedback</li>
+                <li><strong>Phased Implementation:</strong> Gradual rollout strategy</li>
+                <li><strong>Continuous Monitoring:</strong> Real-time impact assessment</li>
+            </ul>
+
+            <h3>🔄 Improvement Areas</h3>
+            <ul>
+                <li><strong>Clearer Guidelines:</strong> Detailed implementation instructions</li>
+                <li><strong>Enhanced Training:</strong> More comprehensive education programs</li>
+                <li><strong>Better Coordination:</strong> Improved inter-agency cooperation</li>
+                <li><strong>Resource Allocation:</strong> Adequate funding for implementation</li>
+            </ul>
+        </div>
+
+        <!-- Slide 34: Recommendations -->
+        <div class="slide">
+            <div class="slide-counter">34 / 36</div>
+            <h1>Recommendations</h1>
+            <h2>Way Forward for Effective Implementation</h2>
+            
+            <h3>🎯 Short-term Recommendations (6-12 months)</h3>
+            <ul>
+                <li><strong>Intensive Training:</strong>
+                    <ul>
+                        <li>Specialized programs for police officers</li>
+                        <li>Judicial education on new provisions</li>
+                        <li>Legal practitioner workshops</li>
+                    </ul>
+                </li>
+                <li><strong>Clear Guidelines:</strong>
+                    <ul>
+                        <li>Detailed implementation manuals</li>
+                        <li>Standard operating procedures</li>
+                        <li>Best practice documentation</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>📈 Medium-term Recommendations (1-3 years)</h3>
+            <ul>
+                <li><strong>Infrastructure Development:</strong>
+                    <ul>
+                        <li>Digital evidence laboratories</li>
+                        <li>Cyber crime investigation units</li>
+                        <li>Court technology upgrades</li>
+                    </ul>
+                </li>
+                <li><strong>Legal Amendments:</strong>
+                    <ul>
+                        <li>Address identified gaps</li>
+                        <li>Clarify ambiguous provisions</li>
+                        <li>Enhance gender justice provisions</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>🔮 Long-term Recommendations (3-5 years)</h3>
+            <ul>
+                <li><strong>Comprehensive Review:</strong>
+                    <ul>
+                        <li>Impact assessment study</li>
+                        <li>Stakeholder feedback analysis</li>
+                        <li>International best practice integration</li>
+                    </ul>
+                </li>
+                <li><strong>Future-proofing:</strong>
+                    <ul>
+                        <li>Emerging technology crimes</li>
+                        <li>AI and machine learning implications</li>
+                        <li>Global cooperation mechanisms</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Slide 35: Conclusion -->
+        <div class="slide">
+            <div class="slide-counter">35 / 36</div>
+            <h1>Conclusion</h1>
+            <h2>BNS 2023 - A New Era of Justice</h2>
+            
+            <h3>🎯 Key Achievements</h3>
+            <ul>
+                <li><strong>Historical Milestone:</strong> Replaced 164-year-old colonial law</li>
+                <li><strong>Modern Framework:</strong> Adapted to contemporary challenges</li>
+                <li><strong>Social Progress:</strong> Enhanced inclusivity and protection</li>
+                <li><strong>Technological Integration:</strong> Digital age readiness</li>
+            </ul>
+
+            <h3>⚖️ Balanced Assessment</h3>
+            <ul>
+                <li><strong>Strengths:</strong>
+                    <ul>
+                        <li>Comprehensive modernization</li>
+                        <li>Gender inclusivity improvements</li>
+                        <li>Technology integration</li>
+                        <li>New crime categories</li>
+                    </ul>
+                </li>
+                <li><strong>Areas for Improvement:</strong>
+                    <ul>
+                        <li>Gender justice gaps</li>
+                        <li>Free speech concerns</li>
+                        <li>Implementation challenges</li>
+                        <li>Legal protection gaps</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>🔮 Future Outlook</h3>
+            <p>BNS 2023 represents a <span class="highlight">significant step forward</span> in India's legal evolution. While challenges remain, the foundation for a more just, inclusive, and modern criminal justice system has been laid.</p>
+
+            <h3>💡 Final Thoughts</h3>
+            <p>The success of BNS 2023 will depend on:</p>
+            <ul>
+                <li><strong>Effective Implementation</strong></li>
+                <li><strong>Continuous Improvement</strong></li>
+                <li><strong>Stakeholder Cooperation</strong></li>
+                <li><strong>Public Engagement</strong></li>
+            </ul>
+        </div>
+
+        <!-- Slide 36: References -->
+        <div class="slide">
+            <div class="slide-counter">36 / 36</div>
+            <h1>References</h1>
+            <h2>Sources and Further Reading</h2>
+            
+            <h3>📚 Primary Sources</h3>
+            <ul>
+                <li><strong>The Bharatiya Nyaya Sanhita, 2023</strong> - Act No. 45 of 2023</li>
+                <li><strong>Indian Penal Code, 1860</strong> - For comparison</li>
+                <li><strong>Parliamentary Debates</strong> - Lok Sabha and Rajya Sabha proceedings</li>
+                <li><strong>Standing Committee Report</strong> - Home Affairs Committee analysis</li>
+            </ul>
+
+            <h3>🌐 Online Resources</h3>
+            <ul>
+                <li><strong>India Code Portal</strong> - Official government legislation</li>
+                <li><strong>PRS Legislative Research</strong> - Bill analysis and tracking</li>
+                <li><strong>LexisNexis Legal Insights</strong> - Expert commentary</li>
+                <li><strong>Supreme Court Judgments</strong> - Related case law</li>
+            </ul>
+
+            <h3>📖 Academic Sources</h3>
+            <ul>
+                <li><strong>Law Commission Reports</strong> - Historical recommendations</li>
+                <li><strong>Legal Journals</strong> - Scholarly analysis</li>
+                <li><strong>University Research</strong> - Academic studies</li>
+                <li><strong>International Comparisons</strong> - Global criminal law trends</li>
+            </ul>
+
+            <h3>📰 News and Media</h3>
+            <ul>
+                <li><strong>Legal News Portals</strong> - Current developments</li>
+                <li><strong>Expert Interviews</strong> - Professional opinions</li>
+                <li><strong>Implementation Reports</strong> - Ground-level feedback</li>
+            </ul>
+
+            <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                <h3 style="color: #2c3e50;">Thank You</h3>
+                <p style="font-size: 1.2em; color: #7f8c8d;">Questions and Discussion</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">Previous</button>
+        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">Next</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            
+            // Update navigation buttons
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(direction) {
+            if (direction === 1 && currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            } else if (direction === -1 && currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight' || event.key === ' ') {
+                changeSlide(1);
+            } else if (event.key === 'ArrowLeft') {
+                changeSlide(-1);
+            }
+        });
+
+        // Initialize
+        showSlide(0);
+    </script>
+</body>
+</html>
